@@ -120,7 +120,7 @@ main{
     grid-area: kira;
     background-color: var(--white);
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 0.8rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (max-width: 59rem) {
