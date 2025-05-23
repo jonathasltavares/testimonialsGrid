@@ -71,8 +71,8 @@ main{
     gap: 1rem;
 }
 .card  header  img{
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
 }
 .card > header > .profile-info{
@@ -96,7 +96,7 @@ main{
 
     color: var(--white);
 }
-.card.card.daniel  header  img{
+.card.daniel  > header > img{
     border: 2px solid var(--purple-300);
 }
 .card.jonathan{
@@ -113,7 +113,7 @@ main{
     background-color: var(--dark-blue);
     color: var(--white);
 }
-.card.patrick  header  img{
+.card.patrick > header > img{
     border: 2px solid var(--purple-300);
 }
 .card.kira{
@@ -123,7 +123,7 @@ main{
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media (max-width: 768px) {
+@media (max-width: 59rem) {
   .testimonials {
     display: flex;
     flex-direction: row;
