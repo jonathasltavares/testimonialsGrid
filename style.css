@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --font-size: 13px;
+}
+h2, p{
+    margin: 0;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: var(--font-size);
+    font-weight: 500;
+    color: var(--grey-500);
+    background-color: var(--purple-50);
+
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.testimonials{
+    width: 78%;
+    padding: 3rem 0 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.329);
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card-content > p{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.card > header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card  header  img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.card > header > .profile-info{
+    display: flex;
+    flex-direction: column;
+}
+.card  header  h2{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.card > header > .profile-info > p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.card.daniel{
+    grid-area: daniel;
+    background-color: var(--purple-500);
+    background-image: url('/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 90% top; 
+
+    color: var(--white);
+}
+.card.card.daniel  header  img{
+    border: 2px solid var(--purple-300);
+}
+.card.jonathan{
+    grid-area: jonathan;
+    background-color: var(--grey-500);
+    color: var(--white);
+}
+.card.jeanette{
+    grid-area: jeanette;
+    background-color: var(--white);
+}
+.card.patrick{
+    grid-area: patrick;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+.card.patrick  header  img{
+    border: 2px solid var(--purple-300);
+}
+.card.kira{
+    grid-area: kira;
+    background-color: var(--white);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 768px) {
+  .testimonials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .card {
+    grid-area: unset;
+    width: 100%;
+  }
+}
